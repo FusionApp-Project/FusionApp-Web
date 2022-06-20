@@ -1,58 +1,105 @@
-@extends('layouts.main')
-
-@section('title', trans('login.title'))
-
-@section('page_content')
-<section>
-  <div class="page-header min-vh-75">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-4 col-lg-5 col-md-6 d-flex flex-column mx-auto">
-          <div class="card card-plain mt-4">
-            <div class="card-header pb-0 text-left bg-transparent">
-              <h3 class="font-weight-bolder text-info text-gradient">@lang('login.page_title')</h3>
-              <p class="mb-0">@lang('login.page_subtitle')</p>
-              @if(session('status'))
-                <div style="margin-top: 20px" class="alert alert-danger">{{session('status')}}</div>
-              @endif
-            </div>
-            <div class="card-body">
-              <form role="form" action="{{route('login')}}" method="post">
-                @csrf
-                <label>@lang('login.form_email')</label>
-                <div class="mb-3">
-                  <input type="email" name="email" class="form-control @error('email') is-invalid @enderror" placeholder="@lang('login.form_email')" aria-label="Email" aria-describedby="email-addon">
-                  @error('email')<div class="invalid-feedback">{{ $message }}</div>@enderror
-                </div>
-                <label>@lang('login.form_password')</label>
-                <div class="mb-3">
-                  <input type="password" name="password" class="form-control @error('password') is-invalid @enderror" placeholder="@lang('login.form_password')" aria-label="Password" aria-describedby="password-addon">
-                  @error('password')<div class="invalid-feedback">{{ $message }}</div>@enderror
-                </div>
-                <div class="form-check form-switch">
-                  <input class="form-check-input" type="checkbox" name="remember" id="remember">
-                  <label class="form-check-label" for="remember">@lang('login.form_remember')</label>
-                </div>
-                <div class="text-center">
-                  <button type="submit" class="btn bg-gradient-info w-100 mt-4 mb-0">@lang('login.form_submit')</button>
-                </div>
-              </form>
-            </div>
-            <div class="card-footer text-center pt-0 px-lg-2 px-1">
-              <p class="mb-4 text-sm mx-auto">
-                @lang('login.no_account_text')
-                <a href="{{route('register')}}" class="text-info text-gradient font-weight-bold">@lang('login.no_account_button')</a>
-              </p>
-            </div>
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>@lang('login.title') - FusionApp</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="{{asset('css/login.css')}}" />
+  </head>
+  <body>
+    <section class="ftco-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-6 text-center mb-5">
+            <h2 class="heading-section">@lang('login.page_title')</h2>
           </div>
         </div>
-        <div class="col-md-6">
-          <div class="oblique position-absolute top-0 h-100 d-md-block d-none me-n8">
-            <div class="oblique-image bg-cover position-absolute fixed-top ms-auto h-100 z-index-0 ms-n6" style="background-image:url('{{asset('img/curved-images/curved6.jpg')}}')"></div>
+        <div class="row justify-content-center">
+          <div class="col-md-12 col-lg-10">
+            <div class="wrap d-md-flex">
+              <div
+                class="img"
+                style="
+                  background-image: url({{asset('img/curved-images/curved-11.jpg')}});
+                "
+              ></div>
+              <div class="login-wrap p-4 p-md-5">
+                <div class="d-flex">
+                  <div class="w-100">
+                    <h3 class="mb-4">@lang('login.title')</h3>
+                    @if(session('status'))
+                      <div style="margin-top: 20px" class="alert alert-danger">{{session('status')}}</div>
+                    @endif
+                  </div>
+                  <div class="w-100">
+                    {{-- <p class="social-media d-flex justify-content-end">
+                      <a
+                        href="#"
+                        class="social-icon d-flex align-items-center justify-content-center"
+                        ><span class="fa fa-facebook"></span
+                      ></a>
+                      <a
+                        href="#"
+                        class="social-icon d-flex align-items-center justify-content-center"
+                        ><span class="fa fa-twitter"></span
+                      ></a>
+                    </p> --}}
+                  </div>
+                </div>
+                <form action="{{route('login')}}" method="post" class="signin-form">
+                  @csrf
+                  <div class="form-group mb-3">
+                    <label class="label" for="name">@lang('login.form_email')</label>
+                    <input
+                      type="text"
+                      class="form-control @error('email') is-invalid @enderror"
+                      placeholder="@lang('login.form_email')"
+                      name="email"
+                    />
+                    @error('email')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                  </div>
+                  <div class="form-group mb-3">
+                    <label class="label" for="password">@lang('login.form_password')</label>
+                    <input
+                      type="password"
+                      class="form-control @error('password') is-invalid @enderror"
+                      placeholder="@lang('login.form_password')"
+                      name="password"
+                    />
+                    @error('password')<div class="invalid-feedback">{{ $message }}</div>@enderror
+                  </div>
+                  <div class="form-group">
+                    <button
+                      type="submit"
+                      class="form-control btn btn-primary rounded submit px-3"
+                    >
+                      @lang('login.form_submit')
+                    </button>
+                  </div>
+                  <div class="form-group d-md-flex">
+                    <div class="w-50 text-left">
+                      <label class="checkbox-wrap checkbox-primary mb-0"
+                        >@lang('login.form_remember')
+                        <input type="checkbox" checked="" />
+                        <span class="checkmark"></span>
+                      </label>
+                    </div>
+                    <div class="w-50 text-md-right">
+                      <a href="#">@lang('login.forgot_password')</a>
+                    </div>
+                  </div>
+                </form>
+                <p class="text-center">
+                  @lang('login.no_account_text') <a data-toggle="tab" href="#signup">@lang('login.no_account_button')</a>
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
-@endsection
+    </section>
+  </body>
+</html>

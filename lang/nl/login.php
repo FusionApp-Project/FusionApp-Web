@@ -10,4 +10,5 @@ return array (
   'form_submit' => 'Inloggen',
   'no_account_text' => 'Nog geen account?',
   'no_account_button' => 'Registreren',
+  'forgot_password' => 'Wachtwoord vergeten?',
 );

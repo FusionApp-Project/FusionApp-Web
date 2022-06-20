@@ -10,4 +10,5 @@ return array (
   'no_account_text' => 'No account yet?',
   'page_subtitle' => 'Sign in to continue',
   'page_title' => 'Welcome back!',
+  'forgot_password' => 'Forgot your password?',
 );

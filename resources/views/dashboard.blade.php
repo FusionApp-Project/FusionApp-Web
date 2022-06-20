@@ -1,7 +1,13 @@
-@extends('layouts.app')
+@extends('layout.app')
 
-@section('title', trans('dashboard.title'))
+@section('page_title', trans('dashboard.title'))
 
 @section('content')
-Dashboard coming soon
+<div class="row">
+  <div class="col-md-12">
+    <div class="white-box">
+      <h3 class="box-title">Blank Page</h3>
+    </div>
+  </div>
+</div>
 @endsection
