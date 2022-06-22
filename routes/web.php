@@ -7,6 +7,7 @@ use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
 use App\Http\Controllers\Account\AccountController;
 use App\Http\Controllers\Account\EditAccountController;
+use App\Http\Controllers\Auth\SocialiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -23,6 +24,8 @@ Route::get('/setlang/{lang}', [LanguageController::class, 'set'])->name('setlang
 
 Route::get('/', [DashboardController::class, 'index'])->name('dashboard')->middleware();
 
+Route::get('/login/discord', [SocialiteController::class, 'discordLogin']);
+Route::get('/login/discord/callback', [SocialiteController::class, 'discordLoginCallback']);
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'post']);
 
