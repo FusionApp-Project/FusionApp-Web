@@ -23,7 +23,7 @@
               <div
                 class="img"
                 style="
-                  background-image: url({{asset('img/curved-images/curved-11.jpg')}});
+                  background-image: url({{asset('img/curved-images/curved9.jpg')}});
                 "
               ></div>
               <div class="login-wrap p-4 p-md-5">
@@ -93,7 +93,7 @@
                   </div>
                 </form>
                 <p class="text-center">
-                  @lang('login.no_account_text') <a data-toggle="tab" href="#signup">@lang('login.no_account_button')</a>
+                  @lang('login.no_account_text') <a data-toggle="tab" href="{{route('register')}}">@lang('login.no_account_button')</a>
                 </p>
               </div>
             </div>
