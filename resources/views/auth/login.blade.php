@@ -35,6 +35,7 @@
                     @endif
                   </div>
                   <div class="w-100">
+                    // TODO: Add social buttons
                     {{-- <p class="social-media d-flex justify-content-end">
                       <a
                         href="#"

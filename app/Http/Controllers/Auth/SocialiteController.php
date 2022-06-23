@@ -15,11 +15,13 @@ class SocialiteController extends Controller
 
     public function discordLoginCallback() {
         $user = Socialite::driver('discord')->user();
+        // FIXME: Add user logic
         // if (User::where('email', '=', $user->email)->exists()) {
         //     dd('User exists');
         // } else {
         //     dd('User does not exist');
         // }
+        // TODO: Remove dd()
         dd($user);
     }
 }
