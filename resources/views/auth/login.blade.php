@@ -7,7 +7,7 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="{{asset('css/login.css')}}" />
+    <link rel="stylesheet" href="{{mix('css/login.css')}}" />
   </head>
   <body>
     <section class="ftco-section">
@@ -35,19 +35,19 @@
                     @endif
                   </div>
                   <div class="w-100">
-                    // TODO: Add social buttons
-                    {{-- <p class="social-media d-flex justify-content-end">
+                    <!-- TODO: Add social buttons -->
+                    <p class="social-media d-flex justify-content-end">
                       <a
-                        href="#"
+                        href="{{route('discordLogin')}}"
                         class="social-icon d-flex align-items-center justify-content-center"
-                        ><span class="fa fa-facebook"></span
+                        ><span class="fab fa-discord"></span
                       ></a>
-                      <a
+                      {{-- <a
                         href="#"
                         class="social-icon d-flex align-items-center justify-content-center"
                         ><span class="fa fa-twitter"></span
-                      ></a>
-                    </p> --}}
+                      ></a> --}}
+                    </p>
                   </div>
                 </div>
                 <form action="{{route('login')}}" method="post" class="signin-form">

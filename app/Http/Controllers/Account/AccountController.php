@@ -14,8 +14,7 @@ class AccountController extends Controller
 
     public function index()
     {
-        // return view('account.index');
-        dd(auth()->user());
+        return view('account.index');
     }
 
     public function logout()

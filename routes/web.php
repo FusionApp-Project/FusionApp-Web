@@ -1,13 +1,14 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\TestController;
 use App\Http\Controllers\LanguageController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\Auth\RegisterController;
+use App\Http\Controllers\Auth\SocialiteController;
 use App\Http\Controllers\Account\AccountController;
 use App\Http\Controllers\Account\EditAccountController;
-use App\Http\Controllers\Auth\SocialiteController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,11 +21,18 @@ use App\Http\Controllers\Auth\SocialiteController;
 |
 */
 
+// Test routes
+Route::get('/test', [TestController::class, 'index']);
 Route::get('/setlang/{lang}', [LanguageController::class, 'set'])->name('setlanguage');
 
-Route::get('/', [DashboardController::class, 'index'])->name('dashboard')->middleware();
 
-Route::get('/login/discord', [SocialiteController::class, 'discordLogin']);
+//Main routes
+Route::get('/', [DashboardController::class, 'index'])->name('dashboard');
+
+
+
+// Authentication routes
+Route::get('/login/discord', [SocialiteController::class, 'discordLogin'])->name('discordLogin');
 Route::get('/login/discord/callback', [SocialiteController::class, 'discordLoginCallback']);
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'post']);
