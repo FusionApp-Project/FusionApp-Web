@@ -1,0 +1,236 @@
+@charset "UTF-8";
+
+@import url(https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800);
+@import "icons/themify-icons/themify-icons.css";
+
+// Bootstrap default overrides
+.bg-primary {
+    background: #002de2 !important;
+}
+
+.ftco-section {
+    padding: 7em 0;
+}
+
+.ftco-no-pt {
+    padding-top: 0;
+}
+
+.ftco-no-pb {
+    padding-bottom: 0;
+}
+
+.heading-section {
+    font-size: 28px;
+    color: #000;
+}
+
+.img {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.wrap {
+    width: 100%;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 10px 34px -15px rgba(0, 0, 0, 0.24);
+}
+
+.img,
+.login-wrap {
+    width: 50%;
+}
+
+@media (max-width: 991.98px) {
+    .img,
+    .login-wrap {
+        width: 100%;
+    }
+}
+@media (max-width: 767.98px) {
+    .wrap .img {
+        height: 250px;
+    }
+}
+.login-wrap {
+    position: relative;
+    background: #fff h3;
+    background-font-weight: 300;
+}
+
+.form-group {
+    position: relative;
+}
+
+.form-group .label {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000;
+    font-weight: 700;
+}
+
+.form-group a {
+    color: gray;
+}
+
+.form-control {
+    height: 48px;
+    background: #fff;
+    color: #000;
+    font-size: 16px;
+    border-radius: 5px;
+    box-shadow: none;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.form-control::-webkit-input-placeholder {
+    color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.form-control::-moz-placeholder {
+    color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.form-control:-ms-input-placeholder {
+    color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.form-control:-moz-placeholder {
+    color: rgba(0, 0, 0, 0.2) !important;
+}
+
+.form-control:focus,
+.form-control:active {
+    outline: none !important;
+    box-shadow: none;
+    border: 1px solid #002de2;
+}
+
+.social-media {
+    position: relative;
+    width: 100%;
+}
+
+.social-media .social-icon {
+    display: block;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    font-size: 16px;
+    margin-right: 5px;
+    border-radius: 50%;
+}
+
+.social-media .social-icon span {
+    color: #999;
+}
+
+.social-media .social-icon:hover,
+.social-media .social-icon:focus {
+    background: #002de2;
+}
+
+.social-media .social-icon:hover span,
+.social-media .social-icon:focus span {
+    color: #fff;
+}
+
+.checkbox-wrap {
+    display: block;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.checkbox-wrap input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.checkmark:after {
+    content: "\f0c8";
+    font-family: "FontAwesome";
+    position: absolute;
+    color: rgba(0, 0, 0, 0.1);
+    font-size: 20px;
+    margin-top: -4px;
+    transition: 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .checkmark:after {
+        transition: none;
+    }
+}
+.checkbox-wrap input:checked ~ .checkmark:after {
+    display: block;
+    content: "\f14a";
+    font-family: "FontAwesome";
+    color: rgba(0, 0, 0, 0.2);
+}
+
+.checkbox-primary {
+    color: #002de2;
+}
+
+.checkbox-primary input:checked ~ .checkmark:after {
+    color: #002de2;
+}
+
+.btn {
+    cursor: pointer;
+    box-shadow: none !important;
+    font-size: 15px;
+    padding: 10px 20px;
+}
+
+.btn:hover,
+.btn:active,
+.btn:focus {
+    outline: none;
+}
+
+.btn.btn-primary {
+    background: linear-gradient(60deg, #002de2, #379dff) !important;
+    border: none !important;
+    color: #fff !important;
+}
+
+.btn.btn-primary:hover {
+    border: 1px solid #002de2;
+    background: #002de2 !important;
+    color: #002de2;
+}
+
+.btn.btn-primary.btn-outline-primary {
+    border: 1px solid #002de2;
+    background: transparent;
+    color: #002de2;
+}
+
+.btn.btn-primary.btn-outline-primary:hover {
+    border: 1px solid transparent;
+    background: linear-gradient(0deg, #002de2, #379dff);
+    color: #fff;
+}

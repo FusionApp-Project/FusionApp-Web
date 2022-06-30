@@ -8,7 +8,9 @@
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
     <link href="{{mix('css/fontawesome.css')}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{mix('css/login.css')}}" />
+    <link rel="stylesheet" href="{{mix('css/app.css')}}" />
+    <link rel="stylesheet" href="{{mix('css/bootstrap.css')}}" />
+    <link rel="stylesheet" href="{{mix('css/fontawesome.css')}}" />
   </head>
   <body>
     <section class="ftco-section">

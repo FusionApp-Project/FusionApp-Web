@@ -13,6 +13,8 @@
     <link href="{{mix('css/fontawesome.css')}}" rel="stylesheet">
     <!-- Custom CSS -->
     <link href="{{mix('css/app.css')}}" rel="stylesheet">
+    <link href="{{mix('css/bootstrap.css')}}" rel="stylesheet">
+    <link href="{{mix('css/fontawesome.css')}}" rel="stylesheet">
 </head>
 
 <body>
@@ -36,5 +38,4 @@
     </div>
     <script src="{{mix('js/app.js')}}"></script>
 </body>
-
 </html>
