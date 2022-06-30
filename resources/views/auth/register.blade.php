@@ -7,7 +7,8 @@
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
     />
-    <link rel="stylesheet" href="{{asset('css/login.css')}}" />
+    <link href="{{mix('css/fontawesome.css')}}" rel="stylesheet">
+    <link rel="stylesheet" href="{{mix('css/login.css')}}" />
   </head>
   <body>
     <section class="ftco-section">

@@ -9,8 +9,10 @@
     <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('img/favicon.png')}}">
+    <!-- FontAwesome icons -->
+    <link href="{{mix('css/fontawesome.css')}}" rel="stylesheet">
     <!-- Custom CSS -->
-    <link href="{{asset('css/style.css')}}" rel="stylesheet">
+    <link href="{{mix('css/app.css')}}" rel="stylesheet">
 </head>
 
 <body>
@@ -32,11 +34,7 @@
             @yield('footer')
         </div>
     </div>
-    <script src="{{asset('js/jquery.min.js')}}"></script>
-    <script src="{{asset('js/bootstrap/bootstrap.bundle.min.js')}}"></script>
-    <script src="{{asset('js/app-style-switcher.js')}}"></script>
-    <script src="{{asset('js/waves.js')}}"></script>
-    <script src="{{asset('js/custom.js')}}"></script>
+    <script src="{{mix('js/app.js')}}"></script>
 </body>
 
 </html>
