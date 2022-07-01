@@ -8,7 +8,7 @@ return array (
   'form_password' => 'Password',
   'form_password_confirm' => 'Confirm password',
   'form_submit' => 'Sign up',
-  'has_account_button' => 'Already have an account?',
-  'has_account_text' => 'Sign in',
+  'has_account_button' => 'Sign in',
+  'has_account_text' => 'Already have an account?',
   'page_title' => 'Register new account',
 );

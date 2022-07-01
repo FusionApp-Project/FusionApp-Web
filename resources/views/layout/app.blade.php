@@ -27,7 +27,7 @@
       ></a>
     </div>
     <div
-      class="navbar-collapse collapse"
+      class="navbar-collapse collapse bg-dark"
       id="navbarSupportedContent"
       data-navbarbg="skin5"
     >

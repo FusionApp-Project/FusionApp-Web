@@ -3,11 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <title>@lang('login.title') - FusionApp</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <link href="{{mix('css/fontawesome.css')}}" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4e658c380b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="{{mix('css/login.css')}}" />
   </head>
   <body>

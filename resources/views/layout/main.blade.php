@@ -6,11 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>@yield('page_title') - FusionApp</title>
-    <link rel="canonical" href="https://www.wrappixel.com/templates/ample-admin-lite/" />
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('img/favicon.png')}}">
     <!-- FontAwesome icons -->
-    <link href="{{mix('css/fontawesome.css')}}" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4e658c380b.js" crossorigin="anonymous"></script>
     <!-- Custom CSS -->
     <link href="{{mix('css/app.css')}}" rel="stylesheet">
 </head>
@@ -36,5 +35,4 @@
     </div>
     <script src="{{mix('js/app.js')}}"></script>
 </body>
-
 </html>
