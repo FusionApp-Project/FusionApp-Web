@@ -5,6 +5,5 @@ mix.setResourceRoot('../');
 
 mix.js('resources/js/app.js', 'public/js')
     .js('resources/js/waves.js', 'public/js')
-    .sass('resources/css/bootstrap.scss', 'public/css')
     .sass('resources/css/app.scss', 'public/css')
-    .sass('resources/css/fontawesome.scss', 'public/css');
+    .sass('resources/css/login.scss', 'public/css');
