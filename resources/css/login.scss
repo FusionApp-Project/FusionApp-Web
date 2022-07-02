@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 @import url(https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800);
+@import url("https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"); 
 
 :root {
   --blue: #007bff;
@@ -8857,6 +8858,7 @@ h5 {
   color: rgba(0, 0, 0, 0.1);
   content: '\f0c8';
   font-family: FontAwesome;
+  font-weight: 400;
   font-size: 20px;
   margin-top: -4px;
   position: absolute;
@@ -8872,6 +8874,7 @@ h5 {
   content: '\f14a';
   display: block;
   font-family: FontAwesome;
+  font-weight: 400;
 }
 .checkbox-primary,
 .checkbox-primary input:checked ~ .checkmark:after {
