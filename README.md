@@ -1,8 +1,8 @@
 # FusionApp-Web
 
 > EARLY DEVELOPMENT STAGE
-> This project is still in early development. Many functionalities are not yet implemented.
+> Dit project is nog in een vroeg stadium van ontwikkeling. Veel functionaliteiten zijn (wellicht) nog niet geimplementeerd.
 
 ## What is this?
 
-FusionApp-Web is the web implementation of the FusionApp project. This webapp is written in Laravel (PHP) and will act as an interface for users to interact with FusionApp.
+FusionApp-Web is de web implementatie van het FusionApp project. De app is geschreven in Laravel (PHP).
