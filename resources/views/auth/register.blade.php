@@ -28,9 +28,7 @@
                 <div class="d-flex">
                   <div class="w-100">
                     <h3 class="mb-4">@lang('register.title')</h3>
-                    @if(session('status'))
-                      <div style="margin-top: 20px" class="alert alert-danger">{{session('status')}}</div>
-                    @endif
+                    
                   </div>
                   <div class="w-100">
                     <!-- TODO: Add social buttons -->
@@ -48,6 +46,9 @@
                     </p> --}}
                   </div>
                 </div>
+                @if(session('error'))
+                  <div style="margin-top: 20px" class="alert alert-danger">{{session('error')}}</div>
+                @endif
                 <form action="{{route('register')}}" method="post" class="signin-form">
                   @csrf
                   <div class="form-group mb-3">

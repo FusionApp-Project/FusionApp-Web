@@ -14893,7 +14893,7 @@ File: scss
   width: 100%;
 }
 .user-bg .overlay-box {
-  background: #707cd2;
+  background: var(--second-color);
   opacity: 0.9;
   position: absolute;
   top: 0;
@@ -15225,3 +15225,11 @@ File: scss
   }
 }
 
+
+.connection-active {
+  color: #26ff00;
+}
+
+.connection-inactive {
+  color: red;
+}
