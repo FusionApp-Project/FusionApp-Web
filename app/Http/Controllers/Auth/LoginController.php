@@ -25,7 +25,7 @@ class LoginController extends Controller
         ]);
 
         if (!auth()->attempt($request->only('email', 'password'), $request->remember)) {
-            return back()->with('status', 'Ongeldige inloggegevens');
+            return back()->with('error', 'Ongeldige inloggegevens');
         }
 
         $request->session()->put('lang', auth()->user()->language);

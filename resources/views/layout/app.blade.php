@@ -56,7 +56,7 @@
         <li>
           <a class="profile-pic" href="#">
             <img
-              src="{{asset('img/users/varun.jpg')}}"
+              src="{{auth()->user()->getAvatar()}}"
               alt="user-img"
               width="36"
               class="img-circle"
@@ -86,8 +86,8 @@
         </li>
         <li class="sidebar-item">
           <a
-            class="sidebar-link waves-effect waves-dark sidebar-link @if($page_id == 'profle') active @endif"
-            href="profile.html"
+            class="sidebar-link waves-effect waves-dark sidebar-link @if($page_id == 'profile') active @endif"
+            href="{{route('profile')}}"
             aria-expanded="false"
           >
             <i class="fa fa-user" aria-hidden="true"></i>
