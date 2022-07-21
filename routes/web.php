@@ -26,6 +26,7 @@ Route::post('/profile', [ProfileController::class, 'post']);
 // Authentication routes
 Route::get('/login/discord', [SocialiteController::class, 'discordLogin'])->name('discordLogin');
 Route::get('/login/discord/callback', [SocialiteController::class, 'discordLoginCallback']);
+Route::get('/login/confirm_discord', [LoginController::class, 'confirm_discord']);
 Route::get('/login', [LoginController::class, 'index'])->name('login');
 Route::post('/login', [LoginController::class, 'post']);
 
