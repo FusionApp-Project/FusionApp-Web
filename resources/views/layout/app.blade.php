@@ -55,7 +55,7 @@
           </form>
         </li>
         <li>
-          <a class="profile-pic" href="#">
+          <a class="profile-pic" href="{{route('profile')}}">
             <img
               src="{{auth()->user()->getAvatar()}}"
               alt="user-img"
@@ -83,16 +83,6 @@
           >
             <i class="far fa-clock" aria-hidden="true"></i>
             <span class="hide-menu">@lang('sidebar.dashboard')</span>
-          </a>
-        </li>
-        <li class="sidebar-item">
-          <a
-            class="sidebar-link waves-effect waves-dark sidebar-link @if($page_id == 'profile') active @endif"
-            href="{{route('profile')}}"
-            aria-expanded="false"
-          >
-            <i class="fa fa-user" aria-hidden="true"></i>
-            <span class="hide-menu">@lang('sidebar.profile')</span>
           </a>
         </li>
         <li class="sidebar-item">
