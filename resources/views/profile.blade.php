@@ -22,7 +22,7 @@
             </div>
             <div class="user-btm-box d-md-flex">
                 <div class="col-md-4 col-sm-4 text-center">
-                    <h1 class="{{isset(auth()->user()->discord_id)?"connection-active":"connection-inactive"}}"><i class="fab fa-discord"></i></h1>
+                    <h1 class="{{(auth()->user()->has('discord_profile'))?"connection-active":"connection-inactive"}}"><i class="fab fa-discord"></i></h1>
                 </div>
                 <div class="col-md-4 col-sm-4 text-center">
                     <h1 class="{{isset(auth()->user()->github_id)?"connection-active":"connection-inactive"}}"><i class="fab fa-github"></i></h1>

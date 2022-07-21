@@ -13375,6 +13375,12 @@ Notify
 
 .topbar .top-navbar .navbar-header .navbar-brand .logo-text {
   padding-left: 5px;
+  font-family: "Fredoka One";
+  color: var(--main-color);
+  letter-spacing: 0.2em;
+  span {
+    color: var(--second-color);
+  }
 }
 
 .topbar .top-navbar .navbar-header .navbar-brand .logo-icon {

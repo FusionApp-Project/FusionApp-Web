@@ -3,11 +3,14 @@
 namespace App\Http\Controllers\Auth;
 
 use App\Models\User;
+use App\Models\DiscordProfile;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use Illuminate\Foundation\Events\DiscoverEvents;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Laravel\Socialite\Facades\Socialite;
+use Revolution\Socialite\Discord\DiscordProvider;
 
 class SocialiteController extends Controller
 {
@@ -22,16 +25,29 @@ class SocialiteController extends Controller
 
         $duser = Socialite::driver('discord')->user();
 
-        $user = User::updateOrCreate([
-            'discord_id' => $duser->id,
-        ], [
-            'name' => $duser->name,
-            'email' => $duser->email,
-            'avatar' => $duser->avatar,
-            'password' => Hash::make($duser->id),
-        ]);
+        // Check if DiscordProfile exists
+        if (DiscordProfile::exists($duser->id)) {
+            // DiscordProfile exists
+            // User exists and it connected
+            // TODO: Get user
+            $user = DiscordProfile::where('discord_id', $duser->id)->first()->user;
+        } else {
+            $user = User::create([
+                'name' => $duser->name,
+                'email' => $duser->email,
+                'password' => Hash::make($duser->token),
+                'discord_token' => $duser->token,
+                'discord_refresh_token' => $duser->refreshToken
+            ]);
+            DiscordProfile::create([
+                'user_id' => $user->id,
+                'discord_id' => $duser->id,
+                'username' => $duser->nickname,
+                'avatar' => $duser->avatar
+            ]);
+        }
 
-        Auth::login($user);
+        Auth::login($user, true);
  
         return redirect('/');
     }
