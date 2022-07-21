@@ -13,11 +13,12 @@
           />
         </b>
         <span class="logo-text">
-          <img
+          {{-- <img
             src="{{asset('img/logo_header.png')}}"
             alt="homepage"
             height="50px"
-          />
+          /> --}}
+          FUSION<span>APP</span>
         </span>
       </a>
       <a
