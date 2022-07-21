@@ -13,6 +13,9 @@
         <div class="row justify-content-center">
           <div class="col-md-6 text-center mb-5">
             <h2 class="heading-section">@lang('login.page_title')</h2>
+            @if(isset($message))
+              <div style="margin-top: 20px" class="alert alert-info">@lang('messages.'.$message)</div>
+            @endif
           </div>
         </div>
         <div class="row justify-content-center">
@@ -46,7 +49,7 @@
                   </div>
                 </div>
                 @if(session('error'))
-                  <div style="margin-top: 20px" class="alert alert-danger">{{session('error')}}</div>
+                  <div style="margin-top: 20px" class="alert alert-danger">@lang('messages.'.session('error'))</div>
                 @endif
                 <form action="{{route('login')}}" method="post" class="signin-form">
                   @csrf

@@ -32,6 +32,11 @@ class SocialiteController extends Controller
             // TODO: Get user
             $user = DiscordProfile::where('discord_id', $duser->id)->first()->user;
         } else {
+            // Check if user with email exists
+            if (User::where('email', $duser->email)->exists()) {
+                $request->session()->put('discord_data', $duser);
+                return redirect('/login/confirm_discord');
+            }
             $user = User::create([
                 'name' => $duser->name,
                 'email' => $duser->email,
