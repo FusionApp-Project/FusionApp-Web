@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('somtoday_roosters', function (Blueprint $table) {
             $table->integer('id');
-            $table->integer('leerling_id', false, true)->unsigned()->index();
+            $table->integer('somtoday_profile_id', false, true)->unsigned()->index();
             $table->string('categorie');
             $table->string('locatie');
             $table->string('beginDatumTijd');

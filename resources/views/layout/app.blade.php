@@ -87,8 +87,8 @@
         </li>
         <li class="sidebar-item">
           <a
-            class="sidebar-link waves-effect waves-dark sidebar-link"
-            href="basic-table.html"
+            class="sidebar-link waves-effect waves-dark sidebar-link @if($page_id == 'schedule') active @endif"
+            href="{{route('schedule')}}"
             aria-expanded="false"
           >
             <i class="fa fa-table" aria-hidden="true"></i>

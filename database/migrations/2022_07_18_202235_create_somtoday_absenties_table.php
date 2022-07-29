@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('somtoday_absenties', function (Blueprint $table) {
             $table->integer('id');
-            $table->integer('leerling_id', false, true)->unsigned()->index();
+            $table->integer('somtoday_profile_id', false, true)->unsigned()->index();
             $table->string('absentieSoort');
             $table->string('afkorting');
             $table->string('omschrijving');
