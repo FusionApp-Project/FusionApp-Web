@@ -1,11 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html dir="ltr" lang="@lang('main.language_identifier')">
   <head>
     <meta charset="UTF-8" />
     <title>@lang('register.title') - FusionApp</title>
     <script src="https://kit.fontawesome.com/4e658c380b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="{{mix('css/login.css')}}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800" rel="stylesheet">
+    @vite(["resources/css/login.scss"])
   </head>
   <body>
     <section class="ftco-section">
@@ -28,7 +31,7 @@
                 <div class="d-flex">
                   <div class="w-100">
                     <h3 class="mb-4">@lang('register.title')</h3>
-                    
+
                   </div>
                   <div class="w-100">
                     <!-- TODO: Add social buttons -->
