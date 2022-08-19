@@ -25,4 +25,9 @@ class SomtodayProfile extends Model
     {
         return $this->hasMany(SomtodayAbsentie::class);
     }
+
+    public function token()
+    {
+        return $this->hasOne(SomtodayToken::class);
+    }
 }
