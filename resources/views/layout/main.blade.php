@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html dir="ltr" lang="@lang('main.language_identifier')">
 
 <head>
     <meta charset="utf-8">
@@ -11,7 +11,11 @@
     <!-- FontAwesome icons -->
     <script src="https://kit.fontawesome.com/4e658c380b.js" crossorigin="anonymous"></script>
     <!-- Custom CSS -->
-    <link href="{{mix('css/app.css')}}" rel="stylesheet">
+    @vite(["resources/css/app.css"])
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -33,6 +37,6 @@
             @yield('footer')
         </div>
     </div>
-    <script src="{{mix('js/app.js')}}"></script>
+    @vite(["resources/js/app.js"])
 </body>
 </html>

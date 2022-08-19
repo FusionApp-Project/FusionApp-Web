@@ -1,6 +1,7 @@
 <?php
 
 return array (
+  'language_identifier' => 'en',
   'search_placeholder' => 'Search',
   'logout_btn' => 'Log out',
   'account_btn' => 'My account',

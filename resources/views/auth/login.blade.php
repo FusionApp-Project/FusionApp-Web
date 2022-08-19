@@ -5,7 +5,10 @@
     <title>@lang('login.title') - FusionApp</title>
     <script src="https://kit.fontawesome.com/4e658c380b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="{{mix('css/login.css')}}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,800" rel="stylesheet">
+    @vite(["resources/css/login.scss"])
   </head>
   <body>
     <section class="ftco-section">
